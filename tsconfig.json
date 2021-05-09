@@ -1,0 +1,22 @@
+{
+  "extends": "./tsconfig.base",
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": false,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+  },
+  "files": [
+
+  ],
+  "include": [
+
+  ],
+  "exclude": [
+
+  ],
+  "typeAcquisition": {
+    "enable": false
+  },
+  "compileOnSave": true,
+}
