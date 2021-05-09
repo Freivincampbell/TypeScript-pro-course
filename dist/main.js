@@ -1,4 +1,4 @@
 function main() {
-    console.log('main');
+    console.log('external');
 }
 main();

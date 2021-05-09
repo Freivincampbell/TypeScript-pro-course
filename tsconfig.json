@@ -5,6 +5,9 @@
   "exclude": [
     "src/two.ts",
     "src/internal",
+  ],
+  "include": [
+    "src/external",
     "src/internal/**/*.internal.ts"
   ]
 }
