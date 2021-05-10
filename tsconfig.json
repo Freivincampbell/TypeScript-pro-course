@@ -3,6 +3,7 @@
     "outDir": "./dist",
     "noImplicitAny": true,
     "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": false
+    "suppressImplicitAnyIndexErrors": false,
+    "suppressExcessPropertyErrors": false
   }
 }

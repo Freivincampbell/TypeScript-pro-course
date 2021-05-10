@@ -1,5 +1,5 @@
-var foo = 'bar';
-function add(a, b) {
-    return a + b;
-}
-add(1, 2);
+var obj = {
+    bar: 10
+};
+obj['bar'] = 20;
+obj['foo'] = 20;
