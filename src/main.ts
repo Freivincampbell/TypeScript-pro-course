@@ -1,7 +1,11 @@
-let foo = 'bar'
-
-function add (a: number, b: number) {
-	return a + b
+function foo() {
+	return
+	{
+		x: true
+	}
 }
 
-add(1, 2)
+let x = 0
+loop: while (x < 10) {
+	x++
+}

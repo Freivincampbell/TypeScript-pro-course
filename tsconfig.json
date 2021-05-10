@@ -2,6 +2,8 @@
   "compilerOptions": {
     "outDir": "./dist",
     "noImplicitAny": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "allowUnreachableCode": true,
+    "allowUnusedLabels": true
   }
 }
