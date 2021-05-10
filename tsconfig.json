@@ -4,10 +4,13 @@
   },
   "exclude": [
     "src/two.ts",
-    "src/internal",
+    "src/internal"
   ],
   "include": [
     "src/external",
     "src/internal/**/*.internal.ts"
+  ],
+  "files": [
+    "src/internal/foo.ts"
   ]
 }
