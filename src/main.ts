@@ -1,7 +1,21 @@
-let foo = 'bar'
+function log(msg: string, flag: boolean) {
+	if (msg.length > 1) {
+		return null
+	}
 
-function add (a: number, b: number) {
-	return a + b
+	const MEANING_OF_LIFE = 42
+	console.log(msg)
+	return undefined
 }
 
-add(1, 2)
+function compare(arg: any) {
+	switch (typeof arg) {
+		case 'number':
+			console.log('this is a number')
+		case 'string':
+			console.log('Fallthrough case')
+			break
+		default:
+			console.log('Default case')
+	}
+}
