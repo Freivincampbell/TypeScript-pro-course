@@ -2,6 +2,7 @@
   "compilerOptions": {
     "outDir": "./dist",
     "noImplicitAny": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": false
   }
 }

@@ -1,7 +1,11 @@
-let foo = 'bar'
-
-function add (a: number, b: number) {
-	return a + b
+interface IObj {
+	bar: number,
+	foo?: number
 }
 
-add(1, 2)
+const obj: IObj = {
+	bar: 10
+}
+
+obj['bar'] = 20;
+obj['foo'] = 20;
