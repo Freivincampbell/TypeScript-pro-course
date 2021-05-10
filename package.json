@@ -1,0 +1,11 @@
+{
+  "name": "TypeScript-pro-course",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Freivincampbell/TypeScript-pro-course",
+  "author": "Freivin Campbell <freivin12@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/core": "^11.2.13"
+  }
+}
