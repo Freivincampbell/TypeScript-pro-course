@@ -1,14 +1,6 @@
-'use strict';
-var petStore = {
-    pets: ['dogs', 'cats'],
-    createRandomPetPicker: function () {
-        var _this = this;
-        return function () {
-            var pets = _this.pets;
-            var i = Math.floor(Math.random() * pets.length);
-            return pets[i];
-        };
-    }
-};
-var getRandomPet = petStore.createRandomPetPicker();
-console.log(getRandomPet());
+var el = document.getElementById('myInput');
+if (el) {
+    el.autocomplete;
+}
+var x = {};
+var y = x.foo;

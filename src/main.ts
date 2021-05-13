@@ -1,18 +1,9 @@
-'use strict'
-interface IPetStore {
-	pets: Array<string>,
-	createRandomPetPicker: Function
-}
-const petStore: IPetStore = {
-	pets: ['dogs', 'cats'],
-	createRandomPetPicker: function(this: IPetStore) {
-		return () => {
-			const pets = this.pets
-			const i = Math.floor(Math.random() * pets.length)
-			return pets[i]
-		}
-	}
+const el = document.getElementById('myInput') as HTMLInputElement
+
+if (el) {
+	el.autocomplete
 }
 
-const getRandomPet = petStore.createRandomPetPicker();
-console.log(getRandomPet())
+const x = {}
+
+const y = (x as any).foo
