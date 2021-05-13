@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+//    "noEmitHelpers": true
+    "importHelpers": true
+  }
+}
