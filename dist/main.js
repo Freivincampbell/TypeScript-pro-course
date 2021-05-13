@@ -1,14 +1,12 @@
-'use strict';
-var petStore = {
-    pets: ['dogs', 'cats'],
-    createRandomPetPicker: function () {
-        var _this = this;
-        return function () {
-            var pets = _this.pets;
-            var i = Math.floor(Math.random() * pets.length);
-            return pets[i];
-        };
+function isBar(arg) {
+    return arg.bar !== undefined;
+}
+function isString(arg) {
+    return typeof arg === 'string';
+}
+function foo(x) {
+    if (isString(x)) {
+        console.log(typeof x);
     }
-};
-var getRandomPet = petStore.createRandomPetPicker();
-console.log(getRandomPet());
+    console.log(typeof x);
+}
