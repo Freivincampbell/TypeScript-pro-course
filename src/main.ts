@@ -1,7 +1,18 @@
-let foo = 'bar'
-
-function add (a: number, b: number) {
-	return a + b
+'use strict'
+interface IPetStore {
+	pets: Array<string>,
+	createRandomPetPicker: Function
+}
+const petStore: IPetStore = {
+	pets: ['dogs', 'cats'],
+	createRandomPetPicker: function(this: IPetStore) {
+		return () => {
+			const pets = this.pets
+			const i = Math.floor(Math.random() * pets.length)
+			return pets[i]
+		}
+	}
 }
 
-add(1, 2)
+const getRandomPet = petStore.createRandomPetPicker();
+console.log(getRandomPet())

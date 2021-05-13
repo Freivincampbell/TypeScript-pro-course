@@ -1,5 +1,14 @@
-var foo = 'bar';
-function add(a, b) {
-    return a + b;
-}
-add(1, 2);
+'use strict';
+var petStore = {
+    pets: ['dogs', 'cats'],
+    createRandomPetPicker: function () {
+        var _this = this;
+        return function () {
+            var pets = _this.pets;
+            var i = Math.floor(Math.random() * pets.length);
+            return pets[i];
+        };
+    }
+};
+var getRandomPet = petStore.createRandomPetPicker();
+console.log(getRandomPet());
