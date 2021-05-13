@@ -1,9 +1,9 @@
-const el = document.getElementById('myInput') as HTMLInputElement
-
-if (el) {
-	el.autocomplete
+function addTo(x?: number) {
+	x = x || 0
+	return function add(y: number) {
+		return x! + y;
+	}
 }
 
-const x = {}
-
-const y = (x as any).foo
+const addTo1 = addTo(1)
+addTo1(4)
