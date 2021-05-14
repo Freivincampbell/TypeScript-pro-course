@@ -1,0 +1,11 @@
+{
+  "name": "typescript-pro-library-project",
+  "version": "A micro library witten from scratch to take advantages of the pawer of typescript",
+  "main": "index.js",
+  "repository": "https://github.com/Freivincampbell/TypeScript-pro-course",
+  "author": "Freivin Campbell <freivin12@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.2.4"
+  }
+}
