@@ -1,17 +1,42 @@
+interface Person {
+	name: string
+}
+
+interface Person {
+	name: string
+	age: number
+}
+
+// interface Person {
+// 	name: number
+// 	age: number
+// }
+
+
+const person: Person = {
+	name: 'Freivin',
+	age: 27
+}
+
+interface Window {
+	$: any,
+	angular: any
+}
+
+window.$
+
+
 interface Foo {
-	foo: string
+	bar(qux: string): string
 }
 
-const obj: Object = {
-	foo: ''
+interface Foo {
+	x: number
 }
 
-const obj2: object = {
-	foo: ''
+const foo: Foo = {
+	x: 123,
+	bar(qux: string): string {
+		return ''
+	}
 }
-
-Object.create(obj2)
-
-const wm = new WeakMap<Object, number>()
-
-wm.set({}, 123)

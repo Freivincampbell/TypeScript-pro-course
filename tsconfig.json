@@ -5,7 +5,7 @@
     "strictNullChecks": true,
     "noImplicitThis": true,
     "lib": [
-      "ES2015"
+      "DOM"
     ]
   }
 }
