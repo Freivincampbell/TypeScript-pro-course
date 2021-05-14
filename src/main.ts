@@ -1,42 +1,21 @@
-interface Person {
-	name: string
-}
+import {Observable, of} from 'rxjs';
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/map';
 
-interface Person {
-	name: string
-	age: number
-}
-
-// interface Person {
-// 	name: number
-// 	age: number
-// }
-
-
-const person: Person = {
-	name: 'Freivin',
-	age: 27
-}
-
-interface Window {
-	$: any,
-	angular: any
-}
-
-window.$
-
-
-interface Foo {
-	bar(qux: string): string
-}
-
-interface Foo {
-	x: number
-}
-
-const foo: Foo = {
-	x: 123,
-	bar(qux: string): string {
-		return ''
+declare  module 'rxjs/Observable' {
+	interface Objservable<T> {
+		toJames(): Observable<'James'>
 	}
 }
+
+Observable.prototype.toJames = function () {
+	return Observable.of('James')
+}
+
+const o = Observable
+	.of('John')
+	.toJames()
+	.map((x) => x.toUpperCase())
+
+
+o.subscribe((x) => console.log(x))
