@@ -1,18 +1,21 @@
-var x = 1;
 var Shapes;
 (function (Shapes) {
     Shapes[Shapes["Circle"] = 0] = "Circle";
     Shapes[Shapes["Square"] = 1] = "Square";
     Shapes[Shapes["Triangle"] = 2] = "Triangle";
 })(Shapes || (Shapes = {}));
-var circle = 0 /* Circle */;
-console.log(circle);
-var CDS;
-(function (CDS) {
-    CDS[CDS["OnPush"] = 0] = "OnPush";
-    CDS[CDS["Default"] = 1] = "Default";
-})(CDS || (CDS = {}));
-function isDefaultCDS(cds) {
-    return cds === null || cds === CDS.Default;
+function numCorners(shape) {
+    switch (shape) {
+        case Shapes.Circle:
+            return 0;
+        case Shapes.Square:
+            return 4;
+        case Shapes.Triangle:
+            return 3;
+        default:
+            impossibleShape(shape);
+    }
 }
-console.log(isDefaultCDS(CDS.Default));
+function impossibleShape(shape) {
+    throw new Error("Inhandled " + shape);
+}
