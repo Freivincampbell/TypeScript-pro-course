@@ -1,17 +1,20 @@
-interface Foo {
-	foo: string
+enum Shapes {
+	Circle,
+	Square,
+	Triangle,
+}
+const circle = Shapes.Circle
+
+console.log(Shapes)
+
+
+enum CDS {
+	OnPush,
+	Default,
 }
 
-const obj: Object = {
-	foo: ''
+function isDefaultCDS(cds: CDS): boolean {
+	return cds === null || cds === CDS.Default
 }
 
-const obj2: object = {
-	foo: ''
-}
-
-Object.create(obj2)
-
-const wm = new WeakMap<Object, number>()
-
-wm.set({}, 123)
+console.log(isDefaultCDS(CDS.Default))
