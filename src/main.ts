@@ -1,18 +1,26 @@
-interface IPerson {
+interface Person {
 	name: string,
 	age: number,
 }
 
-type keys = keyof IPerson
-type personAge = IPerson['age']
+// type ReadOnly<Person> = {
+// 	readonly [Property in keyof Person]: Person[Property]
+// }
 
-const foo = {
-	x: true,
+type partialPerson = Partial<Person>
+// pick
+// record
+
+function makePersonReadOnly(p: Person): Readonly<Person> {
+	return Object.freeze(p)
 }
 
-function getProperty<T, K extends keyof T>(obj: T, key: K) {
-	return obj[key]
+type Stringified<T> = {
+	[P in keyof T]: string
 }
 
+const stringifiedPerson: Stringified<Person> = {
+	name: 'Freivin',
+	age: '27',
+}
 
-getProperty(foo, 'x')
