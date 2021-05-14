@@ -1,26 +1,17 @@
-interface Person {
-	name: string,
-	age: number,
+interface Foo {
+	foo: string
 }
 
-// type ReadOnly<Person> = {
-// 	readonly [Property in keyof Person]: Person[Property]
-// }
-
-type partialPerson = Partial<Person>
-// pick
-// record
-
-function makePersonReadOnly(p: Person): Readonly<Person> {
-	return Object.freeze(p)
+const obj: Object = {
+	foo: ''
 }
 
-type Stringified<T> = {
-	[P in keyof T]: string
+const obj2: object = {
+	foo: ''
 }
 
-const stringifiedPerson: Stringified<Person> = {
-	name: 'Freivin',
-	age: '27',
-}
+Object.create(obj2)
 
+const wm = new WeakMap<Object, number>()
+
+wm.set({}, 123)
