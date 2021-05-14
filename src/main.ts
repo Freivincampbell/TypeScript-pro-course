@@ -1,14 +1,18 @@
-interface A {
-	a: string
+interface IPerson {
+	name: string,
+	age: number,
 }
 
-interface B {
-	b: string
+type keys = keyof IPerson
+type personAge = IPerson['age']
+
+const foo = {
+	x: true,
 }
 
-type C = A & B
-
-const foo: C = {
-	a: '',
-	b: ''
+function getProperty<T, K extends keyof T>(obj: T, key: K) {
+	return obj[key]
 }
+
+
+getProperty(foo, 'x')
