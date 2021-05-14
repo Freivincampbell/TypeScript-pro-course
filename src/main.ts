@@ -1,9 +1,14 @@
-function addTo(x?: number) {
-	x = x || 0
-	return function add(y: number) {
-		return x! + y;
-	}
+interface A {
+	a: string
 }
 
-const addTo1 = addTo(1)
-addTo1(4)
+interface B {
+	b: string
+}
+
+type C = A & B
+
+const foo: C = {
+	a: '',
+	b: ''
+}
