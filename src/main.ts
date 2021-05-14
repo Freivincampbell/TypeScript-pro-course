@@ -1,11 +1,17 @@
-enum Shapes {
+declare enum Foo {
+	Bar = 1
+}
+
+const x: Foo.Bar = 1
+
+const enum Shapes {
 	Circle,
 	Square,
 	Triangle,
 }
 const circle = Shapes.Circle
 
-console.log(Shapes)
+console.log(circle)
 
 
 enum CDS {

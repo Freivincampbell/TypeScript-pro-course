@@ -1,11 +1,12 @@
+var x = 1;
 var Shapes;
 (function (Shapes) {
     Shapes[Shapes["Circle"] = 0] = "Circle";
     Shapes[Shapes["Square"] = 1] = "Square";
     Shapes[Shapes["Triangle"] = 2] = "Triangle";
 })(Shapes || (Shapes = {}));
-var circle = Shapes.Circle;
-console.log(Shapes);
+var circle = 0 /* Circle */;
+console.log(circle);
 var CDS;
 (function (CDS) {
     CDS[CDS["OnPush"] = 0] = "OnPush";
