@@ -39,8 +39,20 @@
     "moduleFileExtensions": [
       "ts",
       "js"
-    ]
-  },
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+},
   "lint-staged": {
     "src/**/*.ts": [
       "prettier --write --no-semi --bracket-spacing --single-quote --trailing-comma --use-tabs ES2020",
