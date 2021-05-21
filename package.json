@@ -1,6 +1,6 @@
 {
   "name": "typescript-pro-library-project",
-  "version": "A micro library witten from scratch to take advantages of the pawer of typescript",
+  "version": "0.0.1",
   "main": "build/index.umd.js",
   "files": [
     "build"
